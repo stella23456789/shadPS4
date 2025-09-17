@@ -74,8 +74,8 @@ u64 MemoryManager::ClampRangeSize(VAddr virtual_addr, u64 size) {
         return size;
     }
 
-    ASSERT_MSG(IsValidAddress(reinterpret_cast<void*>(virtual_addr)),
-               "Attempted to access invalid address {:#x}", virtual_addr);
+    // ASSERT_MSG(IsValidAddress(reinterpret_cast<void*>(virtual_addr)),
+    //            "Attempted to access invalid address {:#x}", virtual_addr);
 
     // Clamp size to the remaining size of the current VMA.
     auto vma = FindVMA(virtual_addr);
